@@ -123,7 +123,7 @@ class Display(APIView):
             if not userdetails:
                 return Response({"Message": "User doesn't exist"}, status.HTTP_400_BAD_REQUEST)
             else:
-                return Response({"Your details: First-name:": userdetails.fname, "Last-name:": userdetails.lname, "Date of birth:": userdetails.userdob, "Email:": userdetails.useremail}, status.HTTP_200_OK)
+                return Response({"First-name:": userdetails.fname, "Last-name:": userdetails.lname, "Date of birth:": userdetails.userdob, "Email:": userdetails.email}, status.HTTP_200_OK)
 
 
 class Update(APIView):
